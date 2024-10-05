@@ -1,0 +1,17 @@
+[package]
+name = "Axum"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+anyhow = "1.0.83"
+axum = "0.7.5"
+tokio = { version = "1.37.0", features = ["rt", "rt-multi-thread", "macros"] }
+tower-http = { version = "0.5", features = ["fs"] }
+tower-cookies = "0.10"
+# -- Others
+lazy-regex = "3"
+strum_macros = "0.26.2"
+httpc-test = "0.1.9"
