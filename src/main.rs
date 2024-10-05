@@ -11,7 +11,7 @@ async fn main() {
     );
 
     // region:    ---Start Server
-    let listener = TcpListener::bind("127.0.0.1:8080").await.unwrap();
+    let listener = TcpListener::bind("0.0.0.0:3000").await.unwrap();
     println!("->> LISTENING on {:?}\n", listener.local_addr());
     axum::serve(listener, routers_hello.into_make_service())
         .await
